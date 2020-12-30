@@ -28,8 +28,8 @@ class UsersRequest extends FormRequest
             'email'=>'required|unique:users|min:5|max:100',
             'password'=>'required|min:3|confirmed',
             'role'=>'required',
-            'desc'=>'min|2|max:200',
-            'designation'=>'max|100'
+            'desc'=>'max:200',
+            'designation'=>'max:100'
         ];
     }
 }

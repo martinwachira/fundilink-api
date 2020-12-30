@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//users api's here
+Route::prefix('/user')->group(function(){
+});
+Route::post('/register', 'api\UsersController@register');
