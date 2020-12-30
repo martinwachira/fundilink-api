@@ -26,7 +26,7 @@ class UsersRequest extends FormRequest
         return [
             'name'=>'required|min:3|max:50',
             'email'=>'required|unique:users|min:5|max:100',
-            'password'=>'required|min:3|confirmed',
+            'password'=>'required|min:3',
             'role'=>'required',
             'desc'=>'max:200',
             'designation'=>'max:100'
