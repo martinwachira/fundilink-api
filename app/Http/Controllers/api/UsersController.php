@@ -27,9 +27,7 @@ class UsersController extends Controller
             'role'=>$req->role,
             'desc'=>$req->desc,
             'designation'=>$req->designation,
-        );
-
-        // $user_status = User::where("email", $req->email)->first();        
+        );    
 
        try {
         
@@ -87,9 +85,10 @@ class UsersController extends Controller
         // return response(['user' => Auth::user(), 'access-token' => $accessToken]);
     }   
 
-    public function index()
+    public function getUsers()
     {
-        //
+        $users = User::all();
+        return response()->json($users);
     }
 
     /**
